@@ -1,29 +1,45 @@
 <?php
 
-    $username = $_POST ["username"];
-    $password = $_POST ["password"];
+$host = "localhost";
+$username = "root";
+$dbpassword = "jtionnshou@4152";
+$dbname = "student";
 
-    if(!empty($username)){
-    if(!empty($password)){
-        $host = "localhost";
-        $username = "root";
-        $dbpassword = "jtionnshou@4152";
-        $dbname = "student";
+$conn = mysqli_connect($host, $username, $dbpassword, $dbname);
 
-       $mysqli = new mysqli($host, $username, $dbpassword, $dbname);
+if (mysqli_connect_errno()) {
+    echo'Failed to connect to MySQL: ' . mysqli_connect_error();
+}
 
-        if($mysqli->error){
-            die("Connection error: " . $mysqli->error);
-        }else{
-            echo "Successfully";
+if($_SERVER['REQUEST_METHOD'] == "POST")
+{
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    if(!empty($username) && !empty($password)){
+        $sql = "SELECT * FROM accounts WHERE username = '$username' AND password = '$password'";
+        $result = mysqli_query($conn, $sql);
+
+        if($result){
+            if($result && mysqli_num_rows($result) > 0){
+                $user_data = mysqli_fetch_assoc($result);
+                
+                // password_verify($user_data['password'], $password)
+
+                if($user_data['password'] = $password){
+                    echo "Welcome";
+                }else {
+                    echo "wrong password";
+                }
+            }else {
+                echo "wrong username";
+            }
+        }else {
+            echo "not exits";
         }
-        
     }else{
-        echo "Password should not be empty";
-        die();
+        echo "please enter bot username and password";
     }
-    }else{
-        echo "Username should not be empty";
-        die();
-    }
+
+}
 ?>
