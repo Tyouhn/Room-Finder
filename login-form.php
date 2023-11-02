@@ -17,7 +17,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
     $password = $_POST['password'];
 
     if(!empty($username) && !empty($password)){
-        $sql = "SELECT * FROM accounts WHERE username = '$username' AND password = '$password'";
+        $sql = "SELECT * FROM accounts WHERE username = '$username'";
         $result = mysqli_query($conn, $sql);
 
         if($result){
