@@ -13,6 +13,6 @@
   Create a welcome page if logged in successfully.
 <img width="960" alt="380-2" src="https://github.com/Tyouhn/Room-Finder/assets/30061954/3080f9bc-d394-489a-94a0-db63919a6843">
 
-#November 6, 2023
-  Users can select a floor, week days, and environment.
+#November 19, 2023
+  Users can select a floor, weekdays, and environment.
 ![ezgif-1-5d38d797ee](https://github.com/Tyouhn/Room-Finder/assets/30061954/2ddf667b-6b25-49a9-85cf-70dc01ad15b1)
