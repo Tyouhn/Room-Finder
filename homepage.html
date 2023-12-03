@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Homepage</title>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' 
+        rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+</head>
+
+<body class = "home">
+
+<div class="welcome">
+    <h1 style="font-size: 60px;">WELCOME TO <br> ROOM FINDER</h1>
+    <p><b>In addressing the crucial need for additional study <br>
+        and leisure spaces on campus, 
+        our website aims to <br>introduce a novel solution for NYIT students. 
+    our website <br> offers students real-time access to the availability <br>
+    and crowdedness of open areas and unused classrooms <br>in the buildings. </b></p>
+</div>
+
+<input type="checkbox" id="show">
+<label for="show" class="show-btn">Sign In</label>
+    <div class="wrapper">
+        <label for="show" class="close-btn fas fa-times" ></label>
+        <h1 class = "logo">Login</h1>
+
+        <form action="login.php" method="post">
+            
+            <div class = "input-field"> 
+                <input type="text" id="user" placeholder="Username" 
+                name="user" required>
+                <i class='bx bx-user' ></i>
+            </div>
+
+            <div class = "input-field">
+                <input type="password" id="pass" placeholder="Password" 
+                name="pass" required>
+                <i class='bx bx-lock-open' ></i>
+            </div>
+            <br>
+            <button class="btn">Login</button>
+          <div class="signuplink">Not a User?<a href="registerform.html">Regester Here!</a>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

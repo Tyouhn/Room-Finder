@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SignUp</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+ 
+<body class = "home">
+    
+    <form action="signup.php" method="post" >
+        <div class="container">
+            <h1 class = "logo2">SignUp</h1>
+          <p style="font-size: large;"><b>Please fill out the information below to create your account</b></p>
+          <hr>
+          
+          <input type="text" placeholder="Enter Username" class="box" name="username" required>
+      
+          <input type="password" placeholder="Enter Password" class="box" required name="password" 
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  title="Must contain at least one uppercase 
+          and one lowercase letter, a number and at it should have least 8 or more characters" required id="password">
+      
+          <input type="password" placeholder="Repeat Password" class="box" required id="psw-repeat" name="psw-repeat">
+      
+          
+          <div>
+            <button type="submit" class="signupbtn" ><b>Create Account</b></button>
+            <br>
+            <br>
+            <button type="Reset" class="resetbtn"><b>Reset</b></button>
+          </div>
+        </div>
+      </form>
+</body>
+</html>
